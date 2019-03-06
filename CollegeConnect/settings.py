@@ -37,13 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users.apps.UsersConfig',
+    'pages.apps.PagesConfig',
     'allauth', 
     'allauth.account', 
     'allauth.socialaccount', 
     'django.contrib.sites',
 
-    'users.apps.UsersConfig',
-    'pages.apps.PagesConfig',
+   
 ]
 
 MIDDLEWARE = [
@@ -138,7 +139,7 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
